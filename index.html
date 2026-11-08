@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="theme-color" content="#1a1a1a">
+    <meta name="description" content="Gestione raccolta rifiuti">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="ErtaRifiuti">
+    <title>ErtaRifiuti</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="icon-512.png">
+    <link rel="apple-touch-icon" sizes="192x192" href="icon-192.png">
+    <link rel="apple-touch-icon" sizes="512x512" href="icon-512.png">
+</head>
+<body>
+    <div class="container" id="main-view">
+        <div class="button-container">
+            <button class="btn" id="btn-casa">Casa</button>
+        </div>
+        <div class="button-container">
+            <button class="btn" id="btn-sala">Sala</button>
+        </div>
+    </div>
+    <div class="calendar-container" id="calendar-view" style="display: none;">
+        <div class="calendar-left">
+            <h2 class="calendar-title" id="calendar-title"></h2>
+            <div class="calendar" id="calendar"></div>
+        </div>
+        <div class="calendar-right">
+            <button class="back-btn" id="back-btn">← Indietro</button>
+            <button class="edit-btn" id="edit-btn">✎ Edit</button>
+            <div class="edit-options" id="edit-options" style="display: none;">
+                <div class="edit-option" data-type="CARTA" data-color="#FFD700">
+                    <span class="option-text">CARTA</span>
+                    <span class="option-color" style="background: #FFD700;"></span>
+                </div>
+                <div class="edit-option" data-type="SECCO" data-color="#808080">
+                    <span class="option-text">SECCO</span>
+                    <span class="option-color" style="background: #808080;"></span>
+                </div>
+                <div class="edit-option" data-type="PLASTICA&METALLI" data-color="#87CEEB">
+                    <span class="option-text">PLASTICA&METALLI</span>
+                    <span class="option-color" style="background: #87CEEB;"></span>
+                </div>
+                <div class="edit-option" data-type="UMIDO" data-color="#8B4513">
+                    <span class="option-text">UMIDO</span>
+                    <span class="option-color" style="background: #8B4513;"></span>
+                </div>
+                <div class="edit-option cancel-option" data-type="cancel">
+                    <span class="option-text">✕ Annulla</span>
+                </div>
+                <button class="save-btn" id="save-btn">Salva</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
